@@ -68,11 +68,8 @@ Over **466 million people worldwide** have disabling hearing loss (WHO). This nu
 | Peace | Peace / V Sign | Single-hand |
 | OK | OK / Perfect | Single-hand |
 | Rock On | Rock On | Single-hand |
-| High Five | Celebration | Two-hand |
-| Clapping | Applause | Two-hand |
 | Fist Bump | Solidarity | Two-hand |
 | Winner | Victory / Success | Two-hand |
-| Pointing | Direction / That One | Two-hand |
 
 ### Technical Features
 - **Privacy-First**: All processing happens locally - video never leaves your device
