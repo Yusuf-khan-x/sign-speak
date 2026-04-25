@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignSpeak - Real-Time Sign Language Translator</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- MediaPipe Hands -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤟 SignSpeak</h1>
+            <p class="tagline">Real-Time Sign Language Translator</p>
+        </header>
+
+        <div class="main-content">
+            <div class="video-section">
+                <div class="video-container">
+                    <video id="input_video" autoplay playsinline></video>
+                    <canvas id="output_canvas"></canvas>
+                </div>
+                <div class="status-bar">
+                    <span id="status" class="status">🟡 Initializing...</span>
+                    <span id="fps" class="fps">FPS: 0</span>
+                </div>
+            </div>
+
+            <div class="output-section">
+                <div class="gesture-display">
+                    <h3>Detected Gesture:</h3>
+                    <div id="gesture-result" class="gesture-result">
+                        <span id="gesture-text" class="gesture-text">--</span>
+                    </div>
+                    <div id="gesture-instruction" class="gesture-instruction">
+                        Show a hand gesture to see instructions
+                    </div>
+                </div>
+
+                <div class="translation-history">
+                    <h3>Translation History:</h3>
+                    <div id="history" class="history-list">
+                        <!-- History items will be added here -->
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="speak-btn" class="btn btn-primary">🔊 Speak</button>
+                    <button id="clear-btn" class="btn btn-secondary">🗑️ Clear</button>
+                    <button id="camera-btn" class="btn btn-primary">📷 Toggle Camera</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="gesture-guide">
+            <h3>Single-Hand Gestures:</h3>
+            <div class="gesture-cards">
+                <div class="gesture-card">
+                    <span class="gesture-icon">✋</span>
+                    <span class="gesture-name">Open Palm</span>
+                    <span class="gesture-meaning">Hello</span>
+                </div>
+                <div class="gesture-card">
+                    <span class="gesture-icon">👍</span>
+                    <span class="gesture-name">Thumbs Up</span>
+                    <span class="gesture-meaning">Yes / Good</span>
+                </div>
+                <div class="gesture-card">
+                    <span class="gesture-icon">👎</span>
+                    <span class="gesture-name">Thumbs Down</span>
+                    <span class="gesture-meaning">No</span>
+                </div>
+                <div class="gesture-card">
+                    <span class="gesture-icon">🤟</span>
+                    <span class="gesture-name">I Love You</span>
+                    <span class="gesture-meaning">I Love You</span>
+                </div>
+                <div class="gesture-card">
+                    <span class="gesture-icon">✊</span>
+                    <span class="gesture-name">Fist</span>
+                    <span class="gesture-meaning">Help</span>
+                </div>
+                <div class="gesture-card">
+                    <span class="gesture-icon">✌️</span>
+                    <span class="gesture-name">Peace</span>
+                    <span class="gesture-meaning">Peace / V Sign</span>
+                </div>
+                <div class="gesture-card">
+                    <span class="gesture-icon">👌</span>
+                    <span class="gesture-name">OK</span>
+                    <span class="gesture-meaning">OK / Perfect</span>
+                </div>
+                <div class="gesture-card">
+                    <span class="gesture-icon">🤘</span>
+                    <span class="gesture-name">Rock On</span>
+                    <span class="gesture-meaning">Rock On</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="gesture-guide">
+            <h3>Double-Hand Gestures:</h3>
+            <div class="gesture-cards">
+                <div class="gesture-card">
+                    <span class="gesture-icon">👊👊</span>
+                    <span class="gesture-name">Fist Bump</span>
+                    <span class="gesture-meaning">Solidarity / Respect</span>
+                </div>
+                <div class="gesture-card">
+                    <span class="gesture-icon">✌️✌️</span>
+                    <span class="gesture-name">Winner</span>
+                    <span class="gesture-meaning">Victory / Success</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Built for Google Solution Challenge 2026 | Empowering Communication Through AI</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
