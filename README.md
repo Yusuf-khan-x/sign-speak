@@ -292,10 +292,10 @@ MIT License - Built for educational purposes and the Google Solution Challenge 2
 
 ## Contact
 
-**Built by**: [Your Name]  
-**Email**: [your.email@example.com]  
-**LinkedIn**: [linkedin.com/in/yourprofile]  
-**GitHub**: [github.com/yourusername]
+**Built by**: [MD Yusuf khan ]  
+**Email**: [khanyusuf2006@gmail.com]  
+**LinkedIn**: [https://www.linkedin.com/in/yusuf-khan-69b11a324/]  
+**GitHub**: [https://github.com/Yusuf-khan-x]
 
 ---
 
